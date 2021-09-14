@@ -96,6 +96,12 @@ justify-content: space-between instead of center */
     margin: 20px 0;
 }
 
+.showcase .grid {
+    /* this makes the right side slightly wider than the left side */
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
 
 /* Utilities (classes that will be used throughout the whole website */
 
@@ -123,5 +129,19 @@ justify-content: space-between instead of center */
     /* align-items is different from align-content in that align-content is for multi-line flex-box NOT items on a single-line */
     
     /* makes sure everything is 100% in height of the container */
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    /* there are two main divs within the grid container, so 300px will target the first div and 200px will target the second div */
+    /* grid-template-columns: 300px 200px; */
+    /* repeat means repeat the specified style. the 2 means repeat twice (2 divs) for 1fr */
+    grid-template-columns: repeat(2, 1fr);
+    /* space between the two divs */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* without height, align-items won't work */
     height: 100%;
 }
