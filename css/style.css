@@ -38,3 +38,59 @@ img {
     /* width: 100% will keep the images within its container and it'll fill up the width by 100% */
     width: 100%;
 }
+
+.navbar {
+    background-color: #047aed;
+    color: #fff;
+    height: 70px;
+}
+
+/* turns ul items into flex elements */
+.navbar ul {
+    display: flex;
+}
+
+/* gives spacing around and between the links */
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+/* the flex class that was created will be reused by other elements, so within the navbar, we want to use
+justify-content: space-between instead of center */
+/* so if flex is in the navbar, then we'll have space-between instead of center */
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1100px;
+    /* margin 0 auto puts everything in the container in the middle, so 
+     the navbar will stay in its place when the screen is past 1100px */
+    margin: 0 auto;
+    /* prior to overflow, there is a space between the top of the screen and the navbar because of 
+    the margin-top 10px in h1,h2, so to fix it, we use overflow auto */
+    overflow: auto;
+    /* now even if the screen is smaller than 1100px, we can give the navbar space between the sides of the screen */
+    padding: 0 40px;
+}
+
+.flex {
+    /* turns h1 logo and navbar into flex elements arranged in a ROW (default)*/
+    display: flex;
+    /* moves everything to the center on the main axis (x-axis) */
+    /* justify-content is along the PRIMARY/MAIN axis */
+    justify-content: center;
+    /* moves everything to the center on the secondary axis (y-axis) */
+    /* align-items is along the SECONDARY axis */
+    align-items: center;
+    /* align-items is different from align-content in that align-content is for multi-line flex-box NOT items on a single-line */
+    
+    /* makes sure everything is 100% in height of the container */
+    height: 100%;
+}
