@@ -131,6 +131,24 @@ justify-content: space-between instead of center */
     outline: none;
 }
 
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-2deg);
+    /* webkit is for safari and chrome */
+    -webkit-transform: skewY(-2deg);
+    /* moz is for mozille */
+    -moz-transform: skewY(-2deg);
+    /* ms is for microsoft (IE, Edge) */
+    -ms-transform: skewY(-2deg);
+
+}
 
 /* Utilities (classes that will be used throughout the whole website */
 
