@@ -1,0 +1,76 @@
+/* Utilities (classes that will be used throughout the whole website */
+
+.container {
+    max-width: 1100px;
+    /* margin 0 auto puts everything in the container in the middle, so 
+     the navbar will stay in its place when the screen is past 1100px */
+    margin: 0 auto;
+    /* prior to overflow, there is a space between the top of the screen and the navbar because of 
+    the margin-top 10px in h1,h2, so to fix it, we use overflow auto */
+    overflow: auto;
+    /* now even if the screen is smaller than 1100px, we can give the navbar space between the sides of the screen */
+    padding: 0 40px;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    /* gives a little shadow to the box */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn:hover {
+    /* transforms the button when hovered to scale the size by the number indicated within the parens */
+    transform: scale(0.98);
+}
+
+.flex {
+    /* turns h1 logo and navbar into flex elements arranged in a ROW (default)*/
+    display: flex;
+    /* moves everything to the center on the main axis (x-axis) */
+    /* justify-content is along the PRIMARY/MAIN axis */
+    justify-content: center;
+    /* moves everything to the center on the secondary axis (y-axis) */
+    /* align-items is along the SECONDARY axis */
+    align-items: center;
+    /* align-items is different from align-content in that align-content is for multi-line flex-box NOT items on a single-line */
+    
+    /* makes sure everything is 100% in height of the container */
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    /* there are two main divs within the grid container, so 300px will target the first div and 200px will target the second div */
+    /* grid-template-columns: 300px 200px; */
+    /* repeat means repeat the specified style. the 2 means repeat twice (2 divs) for 1fr */
+    grid-template-columns: repeat(2, 1fr);
+    /* space between the two divs */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* without height, align-items won't work */
+    height: 100%;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
