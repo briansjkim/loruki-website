@@ -140,14 +140,18 @@ justify-content: space-between instead of center */
     right: 0;
     left: 0;
     background: #fff;
-    transform: skewY(-2deg);
+    transform: skewY(-3deg); */
     /* webkit is for safari and chrome */
     -webkit-transform: skewY(-2deg);
     /* moz is for mozille */
     -moz-transform: skewY(-2deg);
     /* ms is for microsoft (IE, Edge) */
     -ms-transform: skewY(-2deg);
+}
 
+/* Stats */
+.stats {
+    padding-top: 100px;
 }
 
 /* Utilities (classes that will be used throughout the whole website */
@@ -192,7 +196,7 @@ justify-content: space-between instead of center */
 .btn:hover {
     /* transforms the button when hovered to scale the size by the number indicated within the parens */
     transform: scale(0.98);
-};
+}
 
 .flex {
     /* turns h1 logo and navbar into flex elements arranged in a ROW (default)*/
