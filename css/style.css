@@ -210,3 +210,9 @@ justify-content: space-between instead of center */
 .languages .card:hover {
     transform: translateY(-15px);
 }
+
+
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+}
