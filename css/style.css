@@ -216,3 +216,60 @@ justify-content: space-between instead of center */
 .footer .social a {
     margin: 0 10px;
 }
+
+
+/* Tablets and Under */
+/* anything UNDER 768px will be styled in here */
+@media(max-width: 768px) {
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        /* initially showcase was set to a height of 400px which put the form
+        over the stats section in smaller screens. Set height to auto so that it takes up
+        the amount of the container*/
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        /* justify-content is to be used for a flexbox container or grid container and it
+        justifies ALL the elements inside */
+        /* justify-self is placed on an actual flexbox or grid container and it justifies JUST
+        that element */
+        justify-self: auto;
+        margin: auto;
+    }
+
+    .cli .grid > *:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+/* Mobile */
+/* anything UNDER 500px will be styled in here */
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
